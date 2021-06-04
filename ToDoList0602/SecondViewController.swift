@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITextFieldDelegate{
     
     // MARK: - Delegate
     var delegate: PassingValueDelegate?
@@ -22,6 +22,7 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.delegate = self
         textField.placeholder = "請輸入文字"
         textField.clearButtonMode = .whileEditing
         textField.becomeFirstResponder()
@@ -33,17 +34,27 @@ class SecondViewController: UIViewController {
         }
     }
     
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("Return")
+        textField.resignFirstResponder()
+        navigationController?.popViewController(animated: true)
+        return true
     }
-    */
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
