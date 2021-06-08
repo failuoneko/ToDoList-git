@@ -43,6 +43,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64A8FC85266DCD790083F115 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				64DD494B2668939D00C917E9 /* TableViewController.swift */,
+				64DD494F266893E600C917E9 /* SecondViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		64A8FC86266DCD970083F115 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64DD494826688E3E00C917E9 /* Item.swift */,
+				64DD495D2668B20700C917E9 /* protocol.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		64DD492726688E1100C917E9 = {
 			isa = PBXGroup;
 			children = (
@@ -65,10 +83,8 @@
 				64DD493326688E1100C917E9 /* AppDelegate.swift */,
 				64DD493526688E1100C917E9 /* SceneDelegate.swift */,
 				64DD493926688E1100C917E9 /* Main.storyboard */,
-				64DD494B2668939D00C917E9 /* TableViewController.swift */,
-				64DD494F266893E600C917E9 /* SecondViewController.swift */,
-				64DD495D2668B20700C917E9 /* protocol.swift */,
-				64DD494826688E3E00C917E9 /* Item.swift */,
+				64A8FC86266DCD970083F115 /* Model */,
+				64A8FC85266DCD790083F115 /* View Controller */,
 				64DD493C26688E1100C917E9 /* Assets.xcassets */,
 				64DD493E26688E1100C917E9 /* LaunchScreen.storyboard */,
 				64DD494126688E1100C917E9 /* Info.plist */,

@@ -8,5 +8,9 @@
 import Foundation
 
 protocol PassingValueDelegate {
-    func setCellText(cellText:String)
+    func setCellText(cellText:Item)
 }
+
+//protocol PassingValueDelegate {
+//    func setCellText(cellText:String)
+//}

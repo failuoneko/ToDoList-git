@@ -55,38 +55,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="標題" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2S-J4-IHG">
+                                <rect key="frame" x="30" y="118" width="330" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="內容" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yXv-pU-xCD">
+                                <rect key="frame" x="30" y="202" width="330" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Zxs-yG-Im7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCP-Mh-pdQ">
+                                <rect key="frame" x="30" y="87" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="代辦事項" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THF-x0-26b">
+                                <rect key="frame" x="30" y="173" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="gMu-xQ-bJa">
+                                <rect key="frame" x="50" y="332" width="290" height="216"/>
+                                <connections>
+                                    <action selector="ToDoDateValueChanged:" destination="iFX-LE-9Xz" eventType="valueChanged" id="b8B-Rt-f3l"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日期" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkg-iF-YrU">
+                                <rect key="frame" x="0.0" y="568" width="390" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="is7-pK-S22">
-                                <rect key="frame" x="169.66666666666666" y="401" width="51" height="42"/>
+                                <rect key="frame" x="169.66666666666666" y="598" width="51" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="確定"/>
                                 <connections>
                                     <action selector="backButton:" destination="iFX-LE-9Xz" eventType="touchUpInside" id="Ke9-zR-uNb"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2S-J4-IHG">
-                                <rect key="frame" x="30" y="337" width="330" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oVs-b1-zeA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="uCP-Mh-pdQ" firstAttribute="leading" secondItem="oVs-b1-zeA" secondAttribute="leading" constant="30" id="3tT-fL-pXa"/>
+                            <constraint firstItem="gMu-xQ-bJa" firstAttribute="leading" secondItem="oVs-b1-zeA" secondAttribute="leading" constant="50" id="6m7-oX-i7e"/>
                             <constraint firstItem="oVs-b1-zeA" firstAttribute="trailing" secondItem="z2S-J4-IHG" secondAttribute="trailing" constant="30" id="Bnk-TC-6Dx"/>
-                            <constraint firstItem="is7-pK-S22" firstAttribute="centerX" secondItem="bB2-zr-knv" secondAttribute="centerX" id="V5x-2L-jbt"/>
+                            <constraint firstItem="oVs-b1-zeA" firstAttribute="trailing" secondItem="pkg-iF-YrU" secondAttribute="trailing" id="Hw1-hQ-Spf"/>
+                            <constraint firstItem="gMu-xQ-bJa" firstAttribute="top" secondItem="yXv-pU-xCD" secondAttribute="bottom" constant="30" id="Ica-su-GAy"/>
+                            <constraint firstItem="yXv-pU-xCD" firstAttribute="leading" secondItem="oVs-b1-zeA" secondAttribute="leading" constant="30" id="SAj-AJ-fQu"/>
+                            <constraint firstItem="is7-pK-S22" firstAttribute="centerX" secondItem="bB2-zr-knv" secondAttribute="centerX" id="Xbk-oH-8jw"/>
+                            <constraint firstItem="THF-x0-26b" firstAttribute="leading" secondItem="oVs-b1-zeA" secondAttribute="leading" constant="30" id="dKU-Kz-l0e"/>
+                            <constraint firstItem="z2S-J4-IHG" firstAttribute="top" secondItem="oVs-b1-zeA" secondAttribute="top" constant="30" id="eu0-AO-Qd8"/>
+                            <constraint firstItem="oVs-b1-zeA" firstAttribute="trailing" secondItem="gMu-xQ-bJa" secondAttribute="trailing" constant="50" id="ifD-Vj-zbN"/>
+                            <constraint firstItem="pkg-iF-YrU" firstAttribute="top" secondItem="gMu-xQ-bJa" secondAttribute="bottom" constant="20" id="n2g-Oq-FPU"/>
+                            <constraint firstItem="z2S-J4-IHG" firstAttribute="top" secondItem="uCP-Mh-pdQ" secondAttribute="bottom" constant="10" id="pu5-Gx-uIX"/>
                             <constraint firstItem="z2S-J4-IHG" firstAttribute="leading" secondItem="oVs-b1-zeA" secondAttribute="leading" constant="30" id="pvW-Xw-asf"/>
-                            <constraint firstItem="is7-pK-S22" firstAttribute="centerY" secondItem="bB2-zr-knv" secondAttribute="centerY" id="xa3-Ra-kg4"/>
-                            <constraint firstItem="is7-pK-S22" firstAttribute="top" secondItem="z2S-J4-IHG" secondAttribute="bottom" constant="30" id="xn1-en-qyf"/>
+                            <constraint firstItem="yXv-pU-xCD" firstAttribute="top" secondItem="THF-x0-26b" secondAttribute="bottom" constant="10" id="v0e-My-zqH"/>
+                            <constraint firstItem="oVs-b1-zeA" firstAttribute="trailing" secondItem="yXv-pU-xCD" secondAttribute="trailing" constant="30" id="w42-Lj-cJu"/>
+                            <constraint firstItem="is7-pK-S22" firstAttribute="top" secondItem="gMu-xQ-bJa" secondAttribute="bottom" constant="50" id="wk9-4Z-xgK"/>
+                            <constraint firstItem="pkg-iF-YrU" firstAttribute="leading" secondItem="oVs-b1-zeA" secondAttribute="leading" id="xdV-5t-wQa"/>
+                            <constraint firstItem="yXv-pU-xCD" firstAttribute="top" secondItem="z2S-J4-IHG" secondAttribute="bottom" constant="50" id="zxu-Sb-j4i"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="985-KD-h5F"/>
                     <connections>
+                        <outlet property="TodoDatePicker" destination="gMu-xQ-bJa" id="MaT-vn-du5"/>
+                        <outlet property="contentTextField" destination="yXv-pU-xCD" id="dHq-PQ-2aG"/>
+                        <outlet property="testDateLabel" destination="pkg-iF-YrU" id="gKF-9H-BhP"/>
                         <outlet property="textField" destination="z2S-J4-IHG" id="Mg5-mm-6lA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MqC-UQ-LUP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2135" y="48"/>
+            <point key="canvasLocation" x="2133.8461538461538" y="47.630331753554501"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SBW-ej-NKY">
